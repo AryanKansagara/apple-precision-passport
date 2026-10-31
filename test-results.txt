@@ -1,0 +1,14 @@
+./build/tests
+PASS independent binary16 golden words
+PASS nearest ties even normal subnormal overflow
+PASS all finite half codes roundtrip
+PASS NaN infinity signed zero classification
+PASS cancellation mismatch and float32 control
+PASS stable exact range negative controls
+PASS reducer preserves mismatch one deletion minimal
+PASS overflow mismatch unlike finite error
+PASS abs relative tolerances and identical runs
+PASS invalid bounds tolerance and nonfailing reducer
+PASS passport exact input reproduction
+SUMMARY groups=11 assertions=63654
+./build/precision-passport demo > /dev/null

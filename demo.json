@@ -1,0 +1,29 @@
+{
+  "schema_version": 1,
+  "kind": "cpu_numeric_differential_lab",
+  "graph": "sequential_sum",
+  "reference": "long_double_accumulation",
+  "candidate": "software_binary16_round_each_add",
+  "rounding": "nearest_ties_even",
+  "metal_tested": false,
+  "coreml_tested": false,
+  "device": "host_cpu",
+  "compiler": "13.3.0",
+  "cpp_standard": 201703,
+  "long_double_mantissa_bits": 64,
+  "absolute_tolerance": 0.25,
+  "relative_tolerance": 0,
+  "original_elements": 5,
+  "reduced_elements": 2,
+  "minimality": "one_element_deletion",
+  "reference_result": 2049,
+  "candidate_result": 2048,
+  "float32_result": 2049,
+  "classification": "finite",
+  "absolute_error": 1,
+  "float32_control_matches": true,
+  "input_binary32_hex": [
+    "45000000",
+    "3f800000"
+  ]
+}

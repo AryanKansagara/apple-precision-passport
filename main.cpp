@@ -1,0 +1,4 @@
+#include "passport.hpp"
+#include <iostream>
+#include <fstream>
+int main(int argc,char**argv){try{if(argc==1||(argc==2&&std::string(argv[1])=="demo")){std::cout<<precision::passport({0,2048,1,-2048,0},0.25,0)<<'\n';return 0;}if(argc!=3||std::string(argv[1])!="reduce")throw std::runtime_error("usage: precision-passport [demo | reduce HEX_FILE]");std::ifstream f(argv[2]);if(!f)throw std::runtime_error("cannot open input");std::vector<float>x;std::string token;while(f>>token){if(token.size()!=8||token.find_first_not_of("0123456789abcdefABCDEF")!=std::string::npos||x.size()==4096)throw std::runtime_error("expected <=4096 eight-digit binary32 hex words");auto u=static_cast<std::uint32_t>(std::stoul(token,nullptr,16));x.push_back(precision::from_bits(u));}std::cout<<precision::passport(x,0.25,0)<<'\n';return 0;}catch(const std::exception&e){std::cerr<<e.what()<<'\n';return 1;}}

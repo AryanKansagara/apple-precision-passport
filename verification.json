@@ -1,0 +1,12 @@
+{
+  "recorded_on": "2026-10-31",
+  "compiler": "g++ 13.3.0",
+  "test_command": "make test",
+  "test_groups": 11,
+  "assertions": 63654,
+  "all_passed": true,
+  "undefined_behavior_sanitizer": "passed native tests; -fsanitize=undefined -fno-sanitize-recover=all",
+  "remote_ci_run": false,
+  "live_integration_validated": false,
+  "deployment_performed": false
+}

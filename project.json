@@ -1,0 +1,9 @@
+{
+  "company": "Apple",
+  "title": "Precision Passport",
+  "test_command": "make test",
+  "demo_command": "./build/precision-passport demo",
+  "scope": "CPU long-double/binary32/software-binary16 reduction comparison and failure minimization; no Metal/Core ML/device validation.",
+  "implemented": true,
+  "integration_status": "unverified"
+}
