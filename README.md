@@ -24,7 +24,7 @@ The reducer greedily removes one input element while preserving a mismatch, repe
 
 **11 groups / 63,654 assertions pass**. This includes all 63,488 finite binary16 words round-tripping through binary32, independently authored conversion goldens, tie-to-even/subnormal/overflow boundaries, classification cases, exact stable sums, identical-run controls, invalid inputs/tolerances, and reducer preservation/minimality.
 
-The designed demo starts with `[0,2048,1,-2048,0]` and reduces to `[2048,1]`: reference/wide control 2049, software binary16 result 2048. This shows expected loss under the stated arithmetic, not an Apple bug. Local artifacts: `demo.json`, `test-results.txt`. Prepared CI has not run remotely.
+The designed demo starts with `[0,2048,1,-2048,0]` and reduces to `[2048,1]`: reference/wide control 2049, software binary16 result 2048. This shows expected loss under the stated arithmetic, not an Apple bug. Local artifacts: `demo.json`, `test-results.txt`. GitHub Actions runs the same checks; inspect Actions for the latest hosted result.
 
 ## Sources and next steps
 
